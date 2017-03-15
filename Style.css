@@ -1,0 +1,96 @@
+html {
+background-image: url(image.jpg);
+background-color: #393a3d;
+background-repeat: no-repeat;	
+
+background-position: center;	
+background-size: cover;
+}
+
+#locator{
+	position: absolute;
+	visibility: visible;
+	left: 1200px;
+	top: 14px;
+	height: 100px;
+	width: 150px;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+body {
+background-color: #FFFFFF;
+font-family: Ariel, sans-serif;
+border: 10px solid #111111;
+width: 1000px ;
+margin: 0px auto;
+margin-bottom: 10px;
+padding: 50px;
+
+}
+
+#ballet {
+float: right;
+text-align: justify;	
+}
+
+#music {
+float: right;
+text-align: justify;
+}
+
+#travel {
+float: right;
+text-align: justify;
+}
+
+
+
+
+#navbar ul {
+
+
+overflow: hidden;
+width: 900px;
+height: 13%;
+background-color: white;
+
+}
+
+#navbar li {
+display: block;
+list-style-type: none;
+ float: left;
+ margin: 30px;
+ padding: 2px;
+font-size: 15;
+}
+
+#navbar li a {
+	display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-size: 16;
+	color: #646566;
+	font-style: italic;
+	
+	
+	
+}
+
+#navbar li a:hover {
+	background-color: #008080;
+	color: white;
+}
+
+ h2{
+	 font-weight: lighter;
+	 font-style: Italic;
+	text-decoration: underline;
+	font-size: 28;
+ }
+ 
