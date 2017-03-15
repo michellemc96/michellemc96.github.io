@@ -1,23 +1,56 @@
+
+ div {
+	margin: 0;
+	padding: 20px;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align:top;
+}
+
 html {
 background-image: url(image.jpg);
 background-color: #393a3d;
 background-repeat: no-repeat;	
-
 background-position: center;	
 background-size: cover;
-}
 
-#locator{
+}
+#header{
+text-align: center;
+}
+#image{
 	position: absolute;
 	visibility: visible;
-	left: 1200px;
+	left: 1070px;
 	top: 14px;
 	height: 100px;
 	width: 150px;
 }
+#item{
+display: inline;
+}
+#item1 img{
+width:300;
+height:200;
+border:0;
+
+}
+
+#item2 img{
+width:300;
+ height:200;
+ border:0;
+}
+.items img {
+width:300;
+height:200;
+border:0;
+}
 
 .img-circle {
-	border-radius: 50%;
+
+border-radius: 50%;
 }
 
 body {
@@ -27,26 +60,39 @@ border: 10px solid #111111;
 width: 1000px ;
 margin: 0px auto;
 margin-bottom: 10px;
-padding: 50px;
+padding: 20px;
 
 }
 
-#ballet {
+.item{
+width: 100%;
+border-bottom: 2px solid #000000;
+}
+.item-icon {
+width: 25%;
+display: inline-block;
+}
+* {
+    box-sizing: border-box;
+}
+.item-icon img {
+
+	width: 200px;
+	height: 200px;
+}
+.item-description {
+width: 60%;
+display: inline-block;
+}
+
+
+#ballet, #music, #travel {
 float: right;
-text-align: justify;	
+display: inline;
+position: absolute;
+right: 300px;
+	
 }
-
-#music {
-float: right;
-text-align: justify;
-}
-
-#travel {
-float: right;
-text-align: justify;
-}
-
-
 
 
 #navbar ul {
@@ -93,4 +139,13 @@ font-size: 15;
 	text-decoration: underline;
 	font-size: 28;
  }
+ 
+ #footer {
+text-align: center;
+ }
+ 
+ 
+ 
+ 
+ 
  
