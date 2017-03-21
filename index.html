@@ -1,37 +1,54 @@
-<html>
-	<head>
-			<title> Resume </title>
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<link rel="stylesheet" href="Style.css"/>
-	</head>
+    <title>Bootstrap 101 Template</title>
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.custom.css" rel="stylesheet">
 
-<body>
-
-
-	<div id="header">
-		<h1> Michelle Mc Carthy</h1>
-	</div>
+  
+  </head>
+  <body>
+  
+  
+  
+  <div  id="body" class="container" >
+		<div id="header" class="row">
+		
+		
+			<div id="image" class= "col-md-4">
+			
+			</div>	
+			
+		</div>
 	
 
-	<div id="image">
-		<img  class="img-circle" src="me1.jpg"/>
-	</div>	
-	
-	<div id="navbar">
-	
-	<form>
 
-	<input class="MyButton" type="button" value="Personal Details" onclick="window.location.href='index.html'"/>
-	<input class="MyButton" type="button" value="Education" onclick="window.location.href='education.html'"/>
-	<input class="MyButton" type="button" value="Work Experience and Achievements" onclick="window.location.href='work_experience.html'"/>
-	<input class="MyButton" type="button" value="My Interests" onclick="window.location.href='interests.html'"/>
-	</form>
 	
+	<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="homepage.html">Michelle Mc Carthy</a>
+    </div>
+    <ul class="nav navbar-nav nav-tabs">
+      
+      <li class="active"><a href="indexNew.html"><span class="glyphicon glyphicon-user"></span>Personal Details</a></li>
+      <li><a href="educationNew.html"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+      <li><a href="work_experienceNew.html"><span class="glyphicon glyphicon-briefcase"></span>Work Experience and Achievements</a></li>
+	  <li><a href="interestsNew.html"><span class="glyphicon glyphicon-headphones"></span>My Interests</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Me!</a></li>
+  </div>
+</nav>
 
-	</div>
-	
-<div id="content">
+
+<div id="content" class="row">
+<div class="picture-aside"><img class="img-circle" src="me1.jpg" alt="Ucc"></div>
 	<h3> Personal Details: </h3> 
 			<p> Enthusiatic, energetic and reliable who works hard to achieve her potentials. Quick learner who is always seeking more learning opportunites.
 			Committed, adaptable and has excellent communication skills. </p>
@@ -44,19 +61,10 @@
 			
 	</div>
 	
-		<div id="footer">
-			<a href="mailto:michellemccarthy21@gmail">Contact me: michellemccarthy21@gmail.com</a> 
-			</div>
+</div>
+</div>
+    <script src="js/jquery-1.12.4.min.js"></script>
 
-	
-
-	
-	</body>
-
-
-		
-
-
-
-
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>

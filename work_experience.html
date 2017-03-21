@@ -1,50 +1,54 @@
-<html>
-	<head>
-			<title> Resume </title>
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<link rel="stylesheet"  href="Style.css"/>
-	</head>
+    <title>Bootstrap 101 Template</title>
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.custom.css" rel="stylesheet">
 
-<body>
-
-	<div id="header">
-	
-		<h1 style="text-align: center"> Michelle Mc Carthy</h1>
+  
+  </head>
+  <body>
+  
+  
+  
+  <div  id="#body" class="container" >
+		<div id="header" class="row">
 		
-	</div>
- 
-	<div id="image">
-	
-		<img class="img-circle" src="me1.jpg"/>
 		
-	</div>	
+			<div id="image" class= "col-md-4">
+			
+			</div>	
+			
+		</div>
 	
-	
-	<div id="navbar">
-<form>
-
-	<input class="MyButton" type="button" value="Personal Details" onclick="window.location.href='index.html'"/>
-	<input class="MyButton" type="button" value="Education" onclick="window.location.href='education.html'"/>
-	<input class="MyButton" type="button" value="Work Experience and Achievements" onclick="window.location.href='work_experience.html'"/>
-	<input class="MyButton" type="button" value="My Interests" onclick="window.location.href='interests.html'"/>
-	</form>
-	
-	</div>
-	
-	<div id="content">
-<h3> Work Experience: </h3>
 
 
-    <h4> The Viaduct Inn (April 2015-Present) </h4> 
-			<p>During my time as a waitress at The Viaduct Inn restaurant, I am constantly improving my skills
-			in customer service and dealing with people on an everyday basis. I am a reliable hard-worker and well able to work 
-			any fast paced environment. </p>
-
-	<h4> Carrigrohane School of Ballet (September 2012-Present) </h4>
-			<p> As an assistant ballet instructure, it has instilled confidence in me over the past five years. Working with children has 
-			improved my listening skills, I have become more patient and I enjoy seeing the results of a team's hard work.</p>
 	
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="homepage.html">Michelle Mc Carthy</a>
+    </div>
+    <ul class="nav navbar-nav nav-tabs">
+      
+     
+      <li><a href="indexNew.html"><span class="glyphicon glyphicon-user"></span> Personal Details</a></li>
+      <li><a href="educationNew.html"><span class="glyphicon glyphicon-education"></span> Education</a></li>
+      <li class="active"><a href="work_experienceNew.html"><span class="glyphicon glyphicon-briefcase"></span>Work Experience and Achievements</a></li>
+	  <li><a href="interestsNew.html"><span class="glyphicon glyphicon-headphones"></span>My Interests</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Me!</a></li>
+  </div>
+</nav>
+	
+<div id="content">
+<div class="picture-aside2"><img class="img-circle" src="pic.jpg"></div>
 <h3> Personal Skills and Achievements: </h3>
 
 	<h4> Time Management:</h4>
@@ -57,9 +61,8 @@
 	<h4> Organisation: </h4>
 			<p> As an assistant ballet tutor, I have gained strong organisational skills through arranging class 
 		    routines weekly and preparing the end of year production annually. </p>
-		
-
-	<h4> Other Skills: </h4>
+			
+			<h4> Other Skills: </h4>
 		<ul> 
 	
 			<li>Programming: HTML, JAVA, SQL, VB.NET.</li>
@@ -68,18 +71,24 @@
 			<li>I have completed the "Choose Safety Program", which increases the awareness of health and safety in the work place.</li>
 			
 		</ul>
-	</div>
- 
- 	<div id="footer">
-	<a href="mailto:michellemccarthy21@gmail">Contact me: michellemccarthy21@gmail.com</a> 
-			</div>
-
-</body>
-
-
-
-
 		
+<h3> Work Experience: </h3>
 
 
+    <h4> The Viaduct Inn (April 2015-Present) </h4> 
+			<p>During my time as a waitress at The Viaduct Inn restaurant, I am constantly improving my skills
+			in customer service and dealing with people on an everyday basis. I am a reliable hard-worker and well able to work 
+			any fast paced environment. </p>
+
+	<h4> Carrigrohane School of Ballet (September 2012-Present) </h4>
+			<p> As an assistant ballet instructure, it has instilled confidence in me over the past five years. Working with children has 
+			improved my listening skills, I have become more patient and I enjoy seeing the results of a team's hard work.</p>
+	
+	</div>
+	
+</div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
