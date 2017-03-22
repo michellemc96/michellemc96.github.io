@@ -15,6 +15,9 @@ ul.nav .glyphicon {
 	padding-right: 5px;
 } 
  
+ .navbar-brand {
+	 font-family: 'Ranchers', cursive;
+ }
  
 .header h2 {
 text-align: center;
