@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Michelle Mc Carthy-{{ page.title }}</title>
+    <title>Michelle Mc Carthy</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/fonts.css" rel="stylesheet">
@@ -37,17 +37,17 @@
     </div>
     <ul class="nav navbar-nav nav-tabs">
       
-      <li {% if page.path == 'index.html' %}class="active" {% endif %}><a href="index.html"><span class="glyphicon glyphicon-user"></span>Personal Details</a></li> 
-      <li {% if page.path == 'education.html' %}class="active" {% endif %}><a href="education.html"><span class="glyphicon glyphicon-education"></span>Education</a></li>
-      <li {% if page.path == 'work_experience.html' %}class="active" {% endif %}><a href="work_experience.html"><span class="glyphicon glyphicon-briefcase"></span>Work Experience and Achievements</a></li>
-	  <li {% if page.path == 'interests.html' %}class="active" {% endif %}><a href="interests.html"><span class="glyphicon glyphicon-headphones"></span>My Interests</a></li>
+      <li class="active"><a href="index.html"><span class="glyphicon glyphicon-user"></span>Personal Details</a></li>
+      <li><a href="education.html"><span class="glyphicon glyphicon-education"></span>Education</a></li>
+      <li><a href="work_experience.html"><span class="glyphicon glyphicon-briefcase"></span>Work Experience and Achievements</a></li>
+	  <li><a href="interests.html"><span class="glyphicon glyphicon-headphones"></span>My Interests</a></li>
     </ul>
 	<ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Me!</a></li>
+      <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact Me!</a></li>
   </div>
 </nav>
 
-{{ page.path }}
+
 <div id="content" class="row">
 {{ content }}
 </div>

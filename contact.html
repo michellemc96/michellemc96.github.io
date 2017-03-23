@@ -1,0 +1,62 @@
+---
+layout: default
+title: Contact
+---
+
+	<div id="contact">
+		<h1> Contact me below: </h1></div>
+		<form method="post">
+	<div class="form-group">
+		<h4>First name:</h4>
+			<input type="text" name="firstname"  placeholder="Your first name.." required>
+		<br>
+		<h4>Last name:</h4>
+			<input type="text" name="lastname" placeholder="Your last name.." required>
+		<br>
+		<h4>Email:</h4>
+			<input type="email" name="email" placeholder="Your email.." required>
+		<br>
+		<h4>Phone number:</h4>
+			<input type="tel" name="number" placeholder="Your phone number.." required>
+		<br>
+		<h4>Message:</h4>
+			<textarea name="message" rows="6" cols="30" placeholder="Enter your message here.." required></textarea>
+		<br>
+		<h4>Please select a contact option below:</h4>
+		<select name="contact_option" required>
+		  <option value="email">Email</option>
+		  <option value="phone">Phone</option>
+		  </select><br>
+		  <br>
+		  <h4>Please specify the time of day availability for contact:</h4>
+			<label class="radio-inline">
+				<input type="radio" name="availability"  value="morning"> 08:00-12:00
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="availability" value="afternoon"> 12:00-16:00
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="availability"  value="evening"> 16:00-20:00
+			</label><br>
+		  <br>
+		<h4>Please choose your favourite animals below:</h4>
+			<label class="checkbox-inline">
+				<input type="checkbox" name="pets" value="dog"> Dog
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" name="pets" value="cat"> Cat
+			</label>
+			<label class="checkbox-inline">
+				<input type="checkbox" name="pets" value="rabbit"> Rabbit
+			</label>
+`			<div class="g-recaptcha" data-sitekey="6LccChoUAAAAAIGpcNYZpM5TE-mttvUWIbb0l6EY"></div>
+		  
+		 <br><br>
+		
+    <div class="col-sm-offset-5 col-sm-10">
+      <button type="submit" class="btn btn-default btn-lg">Submit</button>
+    </div>
+	
+</div>
+</form>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
