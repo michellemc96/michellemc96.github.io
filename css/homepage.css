@@ -1,0 +1,48 @@
+body {
+background-image: url(../starswallpaper.jpg);
+background-color: black;
+}
+h1{
+text-align:center;
+color: white;
+font-family: 'Ranchers', cursive;
+text-shadow: 2px 2px 80px #ffffff;
+font-size:90px;
+
+}
+#content  {
+text-align:center;
+text-decoration: none;
+		
+}
+#picture img{
+	width: 300px;
+	height: 300px;
+
+padding: 60px;
+transition: transform 10s ;
+}
+#picture img:hover{
+text-align:center;
+
+transform: rotate(360deg);
+cursor: pointer;
+  
+}
+ div {
+	margin: 0;
+	padding: 0px;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align:top;
+}
+input {
+	font-family: 'Ranchers', cursive;
+	box-shadow: 2px 2px 80px #ffffff;
+	border-radius: 50%;
+padding: 20px;
+float: center;
+position: relative;
+cursor: pointer;
+	}
