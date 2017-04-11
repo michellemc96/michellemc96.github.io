@@ -1,0 +1,48 @@
+#content {
+	text-align: center;
+	
+	font-size: 30;
+	border: 10px solid #111111;
+	padding-bottom: 200px;
+	
+margin: 0px auto;
+width: 55%;
+background-color: white;
+}
+input, button{
+	padding: 15px;
+	font-size: 20;
+}
+
+button {
+	background-color: #4CAF50; 
+	color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 50%;
+}
+body {
+	background-color: #e2edcb;
+}
+svgMain {
+	border: 50px solid #111111;
+}
+table {
+	border-collapse: collapse;
+	width:100%;
+}
+table, tr, th, td{
+	border: 1px solid black;
+	padding: 70px;
+	font-size: 28;
+	
+}
+table.change_type {
+	
+	display: none;
+}
+table.change_type tbody tr {
+	display: none;
+}

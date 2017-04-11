@@ -1,0 +1,230 @@
+<html>
+<head>
+
+<link href="css/calculator.css" rel="stylesheet">
+ <li><a href="index.html">Return to homepage</a></li>
+</head>
+<body>
+
+<form>
+	<div id="content">
+		<h4>Amount Due:</h4>
+		<input type="text" name="due" id="due" required>
+		<br>
+		<h4>Amount Given:</h4>
+			<input type="text" name="given" id="given" required>
+		<br>
+		<br>
+		<button type="submit" name="calculate">Calculate</button>
+		<br>
+		<h4>Change:</h4>
+			<input type="text" name="change" id="change">
+		<br>
+		<br>
+<div id="svgMain">
+		<table class="change_type">
+		<thead>
+		<tr>
+			<th>Type</th>
+			<th>Amount</th>
+		</tr> </thead>
+		<tbody>
+			<tr id="fifty_dollars">
+				<td class="image"><img src="fifty_dollars.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="twenty_dollars">
+				<td class="image"><img src="twenty_dollars.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="ten_dollars">
+				<td class="image"><img src="ten_dollars.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="five_dollars">
+				<td class="image"><img src="five_dollars.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="one_dollars">
+				<td class="image"><img src="one_dollars.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="quarters">
+				<td class="image"><img src="quarters.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="dimes">
+				<td class="image"><img src="dimes.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="nickles">
+				<td class="image"><img src="nickels.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			<tr id="pennies">
+				<td class="image"><img src="pennies.svg"></td>
+				<td class="amount"> </td>
+			</tr>
+			
+			
+		</tbody>
+	</table>
+</div>
+	</div>
+</form>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+
+
+<script> 
+$(document).ready(function(){
+	function errorMessage (message){
+		alert(message);
+	}
+
+	function totalAmount (total, given){
+		if (given < total) {
+			errorMessage("You didn't give me enough money!");
+			return -1;
+		}
+		var change = round(given - total, 2);
+		return change;
+	}
+
+
+	function changeCalculator (amount){
+		var change = amount;
+		var calculated = {};
+		calculated["fifty_dollars"] = 0;
+		calculated["twenty_dollars"] = 0;
+		calculated["ten_dollars"] = 0;
+		calculated["five_dollars"] = 0;
+		calculated["one_dollars"] = 0;
+		calculated["quarters"] = 0;
+		calculated["dimes"] = 0;
+		calculated["nickels"] = 0;
+		calculated["pennies"] = 0;
+		
+		
+		while (change > 0.0009) {
+			if (change >= 50.00){
+				calculated["fifty_dollars"]++;
+				change = change - 50.00;
+				continue;
+			}
+			if (change >= 20.00){
+				calculated["twenty_dollars"]++;
+				change = change - 20.00;
+				continue;
+			}
+			if (change >= 10.00){
+				calculated["ten_dollars"]++;
+				change = change - 10.00;
+				continue;
+			}
+			if (change >= 5.00) {
+				calculated["five_dollars"]++;
+				change = change - 5.00;
+				continue;
+			}
+			if (change >= 1.00) {
+				calculated["one_dollars"]++;
+				change = change - 1.00;
+				continue;
+			}
+			if (change >= 0.25) {
+				calculated["quarters"]++;
+				change = change - 0.25;
+				continue;
+			}
+			if (change >= 0.10) {
+				calculated["dimes"]++;
+				change = change - 0.10;
+				continue;
+			}
+			if (change >= 0.05) {
+				calculated["nickels"]++;
+				change = change - 0.05;
+				continue;
+			}
+			if (change >= 0.01) {
+				calculated["pennies"]++;
+				change = change - 0.01;
+				continue;
+			}
+		}
+		return calculated;
+	}
+	
+	function round(value, decimals) {
+		return Number(Math.round(value+'e'+decimals)+'e-'+decimals).toFixed(decimals);
+	}
+
+	
+	function doCalculation(){
+		var due = parseFloat($("#due").val()); 
+		var given = parseFloat($("#given").val());
+		var change = totalAmount(due, given);
+		$("#change").val(change);
+		return changeCalculator(change);
+		
+		
+	}
+	
+	$('button[name="calculate"]').on('click', function(event){
+		var change_types = doCalculation();
+		var one_dollars = change_types["one_dollars"];
+		var five_dollars = change_types["five_dollars"];
+		var ten_dollars = change_types["ten_dollars"];
+		var twenty_dollars = change_types["twenty_dollars"];
+		var fifty_dollars = change_types["fifty_dollars"];
+		var pennies = change_types["pennies"];
+		var nickles = change_types["nickles"];
+		var dimes = change_types["dimes"];
+		var quarters = change_types["quarters"];
+		
+		if (one_dollars > 0) {
+			$('#one_dollars').show();
+			$('#one_dollars td.amount').text(one_dollars);
+		}
+		if (five_dollars > 0) {
+			$('#five_dollars').show();
+			$('#five_dollars td.amount').text(five_dollars);
+		
+		}
+		if(ten_dollars > 0) {
+			$('#ten_dollars').show();
+			$('#ten_dollars td.amount').text(ten_dollars);
+		}
+		if(twenty_dollars > 0) {
+			$('#twenty_dollars').show();
+			$('#twenty_dollars td.amount').text(twenty_dollars);
+		}
+		if(fifty_dollars > 0) {
+			$('#fifty_dollars').show();
+			$('#fifty_dollars td.amount').text(fifty_dollars);
+		}
+		if(pennies > 0) {
+			$('#pennies').show();
+			$('#pennies td.amount').text(pennies);
+		}
+		if(nickles > 0) {
+			$('#nickles').show();
+			$('#nickels td.amount').text(nickels);
+		}
+		if(dimes > 0) {
+			$('#dimes').show();
+			$('#dimes td.amount').text(dimes);
+		}
+		if(quarters > 0) {
+			$('#quarters').show();
+			$('#quarters td.amount').text(quarters);
+		}
+		$("table.change_type").show();
+		event.preventDefault();
+		return false;
+	});
+});
+</script>
+</body>
+</html>
