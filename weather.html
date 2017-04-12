@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/weather.css">
+  <title>Weather Forecast</title>
+</head>
+<body>
+
+
+	<nav class="navbar transparent navbar-default navbar-fixed-top" >
+	<div class="container-fluid vertical-center">
+		<div class="navbar-header vertical-center col-md-9">
+		<img  class="nav navbar-nav" src="sun.png"/>
+		<h1 class="nav navbar-nav" id="weather" >My Weather Site</h1>
+		</div>
+		
+	 <form class="navbar-form navbar-right">
+		 <div class="form-group">
+			 <input type="text" name="query" value=""  placeholder="Enter Location..." />
+		  </div>
+			 <input type="submit" name="search" class="btn btn-primary" value="Search" />
+				
+			 <a href="personal_details.html" id="home"><span class="glyphicon glyphicon-home"></span></a>
+		 </form>
+		 
+		</div>
+		</nav>
+	<div id="container">
+	<div class="col-md-3"></div>
+		<div id="details" class="col-md-6">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+			<div id="error_page" class="row, box">
+						<h2>Please enter a valid location</h2>
+						<p>Did you mean?</p>
+						<ul id="error">
+							<li>Boston, MA</li>
+							<li>Boston, JM</li>
+						</ul>
+				</div>
+				<div id="conditions" class="row, box">
+						<h2>Current Conditions</h2>
+						<h1><span id="full"></span></h1>
+						<p>Local time is <span id="local_time_rfc822"> Wed, 05 Apr 2017 15:03:10</span></p>
+						<p>Temperature is <span id="temp_f"> 40</span>°f, <span id="temp_c"> 10</span>°c</p>
+						<p>The wind is <span id="wind_string"> calm</span></p>
+				</div>
+				
+				<div id="forecast_info" class="row">
+					<div id="forecast_later" class="box">
+						<h3><span id="later_title">Wednesday Night</span></h3>
+						<img src="http://icons.wxug.com/i/c/k/nt_cloudy.gif" id="later_icon_url">
+						<p><span id="later_fcttext_metric">Cloudy. Low 3C. Winds NE at 10 to 15 km/h.</span></p>
+					</div>
+					<div id="forecast_tomorrow" class="box">
+						<h3><span id="tomorrow_title">Thursday</span></h3>
+						<img src="http://icons.wxug.com/i/c/k/rain.gif" id="tomorrow_icon_url">
+						<p><span id="tomorrow_fcttext_metric">Rain likely. Becoming windy in the afternoon. High 7C. Winds ENE at 30 to 50 km/h. Chance of rain 100%. Rainfall may reach 25mm. Winds could occasionally gust over 65 km/h. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah <br> blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</span></p>
+					</div>
+					<div id="forecast_tomorrow_night" class="box">
+						<h3><span id="tomorrow_night_title">Thursday Night</span></h3>
+						<img src="http://icons.wxug.com/i/c/k/nt_rain.gif" id="tomorrow_night_icon_url">
+						<p><span id="tomorrow_night_fcttext_metric">Rain and wind. Thunder possible. Low 13C. Winds S at 40 to 55 km/h. Chance of rain 100%.</span></p>
+					</div>					
+				</div>
+			</div>
+			
+	</div>
+				
+ </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="js/weather.js"></script>
+  
+
+</body>
+</html>

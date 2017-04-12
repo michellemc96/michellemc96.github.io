@@ -1,0 +1,107 @@
+body {
+  font-family: 'Helvetica Neue', serif;
+  font-size: 18px;
+  background-color: #c3d6f4;
+  background-image: url('../clouds.jpg');
+  background-repeat: no-repeat;	
+background-position: center;	
+background-size: cover;
+  }
+.navbar.transparent.navbar-default {
+   background: rgba(255, 255, 255,255);
+}
+#weather{
+	color: #4a89ef;
+}
+
+#home {
+	padding-left: 40px;
+}
+#details {
+text-align: center;
+margin-top: 80px;
+background-color: white;
+padding-top: 20px;
+padding-bottom: 10px;
+
+}
+#container {
+min-height: 100vh;
+}
+#header {
+	border: 2px solid white;
+	width: 100%;
+	background-color: transparent;
+}
+
+#details {
+	display: none;
+}
+	
+#details h2 {
+	text-decoration: underline;
+}
+#error_page {
+	display: none;
+}
+#error_page ul {
+	text-align: left;
+	margin-left: 35%;
+	
+}
+.box { 
+	background: #96b6ea;
+	border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 5px #EAEAEA;
+  text-align: center;
+}
+
+#forecast_tomorrow, #forecast_later, #forecast_tomorrow_night {
+background: #96b6ea;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 5px #EAEAEA;
+  display: table-cell;
+  width: 33.33%;
+  
+ 
+ /*
+  display: table-cell;
+  height: 350px;
+  margin: 10px;
+  padding: 15px 10px ;
+  width: 200px;
+*/
+
+  }
+  
+	
+#forecast_info{
+display: table;
+text-align: center;
+margin-top: 0.5em;
+border-spacing: 5px;
+}
+
+
+.header {
+	margin-right: 20px;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  /*min-height: 100vh;*/ /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+#content {
+text-align: center;	
+font-size: 30;
+border: 10px solid #111111;
+padding-bottom: 200px;
+
+width: 55%;
+background-color: white;
+}
